@@ -1,0 +1,312 @@
+<style>
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+height: 100%;
+color: #00ffd9;
+line-height: 1.8;
+
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+background-image: url('/D:\/k.PNG');
+min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+background-image: url("/D:\/lol.jpg");
+min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+background-image: url("/D:\//pp.jpg");
+min-height: 400px;
+}
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: scroll;
+  min-height: 400px;
+}
+}
+
+
+
+
+
+
+
+
+
+#box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  color: rgb(0, 249, 224);
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #731f1f;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #00f863, #ff2a00, #ff0048, #d700fd, #001aff, #00f4c7, #660707, #be086992);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 1px 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgb(221, 0, 255);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: .5s;
+    overflow: hidden;
+    margin-right: 3px;
+  }
+
+  a:first-child{
+    filter: hue-rotate(90deg);
+  }
+  a:last-child{
+    filter: hue-rotate(225deg);
+  }
+  a span{
+    position: absolute;
+    display: block;
+  }
+  a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 1px;
+    background: linear-gradient(90deg,transparent,rgb(6, 15, 184));
+    animation: animatel 1s infinite;
+  }
+  @keyframes animatel{
+    0%{
+      left: -1000%;
+    }
+    1000%{
+      left: 1000%;
+    }
+  }
+  a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 1px;
+    height: 1000%;
+    background: linear-gradient(180deg,transparent,rgb(251, 1, 255));
+    animation: animate2 1s infinite;
+    animation-delay: .25s;
+  }
+  @keyframes animate2 {
+    0%{
+      top: -1000%;
+    }
+    1000%{
+      top: 1000%;
+    }
+  }
+  a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 1000%;
+    height: 1px;
+    background: linear-gradient(270deg,transparent,rgb(255, 0, 0));
+    animation: animate3 1s infinite;
+    animation-delay: .5s;
+  }
+  @keyframes anmimate3{
+    0%{
+      right: -1000%;
+    }
+    1000%{
+      right: 1000%;
+    }
+  }
+  a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 1px;
+    height: 1000%;
+    background: linear-gradient(360deg,transparent,rgb(0, 255, 81));
+    animation: animate4 1s infinite;
+    animation-delay: .75s;
+  }
+  @keyframes animate4{
+    0%{
+      bottom: -1000%;
+    }
+    1000%{
+      bottom: 1000%;
+    }
+  }
+
+  a:hover{
+  background-color: rgb(153, 0, 255);
+  color: rgb(0, 255, 251);
+  box-shadow: 0 0 5px #f4bc03,
+        0 0 25px #03f480,
+        0 0 50px #e840e2,
+        0 0 200px #03f480;
+  -webkit-box-reflect:below 1px linear-gradient(transparent,rgb(255, 0, 174));
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<style>
+    :root {
+      --angle: 1deg;
+      --opacity: 0.5;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    .rainbow {
+      width: 1000px;
+      height: 30px;
+      border-radius: 10px;
+      padding: 2rem;
+      margin: auto;
+    
+      display: grid;
+      place-content: center;
+      text-align: center;
+    
+      font-size: 1.5em;
+    
+      --border-size: 0.3rem;
+      border: var(--border-size) solid transparent;
+    
+      /* Paint an image in the border */
+      border-image: conic-gradient(
+          from var(--angle),
+          #00e5ff 0deg 90deg,
+          #038bd0 90deg 180deg,
+          #00ff2a 180deg 270deg,
+          #f4006e 270deg 360deg
+        )
+        1 stretch;
+      background: rgb(255 255 255 / var(--opacity));
+    }
+    
+    /** show a warning in browers that don't support it **/
+    .warning {
+      margin: 2em;
+      padding: 1em;
+      border: 1px solid #ff0000;
+    }
+    .warning p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    /* Animate when Houdini is available */
+    @supports (background: paint(houdini)) {
+      @property --opacity {
+        syntax: "<number>";
+        initial-value: 0.5;
+        inherits: false;
+      }
+    
+      @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+    
+      @keyframes opacityChange {
+        to {
+          --opacity: 1;
+        }
+      }
+    
+      @keyframes rotate {
+        to {
+          --angle: 360deg;
+        }
+      }
+    
+      .rainbow {
+        animation: rotate 1s linear infinite, opacityChange 1s infinite alternate;
+      }
+    
+      /* Hide the warning */
+      .warning {
+        display: none;
+      }
+    }
+    
+    
+    
+    
+     </style>
